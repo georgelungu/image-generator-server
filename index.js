@@ -20,7 +20,7 @@ app.use('/api/v1/dalle', dalleRoutes)
 // Ensure the app is running once we visit the URL of the root page.
 app.get('/', async (req, res) =>
 {
-    res.send("Hello from DALL-E")
+    res.send("Hello from index.js file test!")
 })
 
 const startServer = async () => 
