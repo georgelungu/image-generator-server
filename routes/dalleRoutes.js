@@ -2,6 +2,8 @@ import express from 'express'
 import * as dotenv from 'dotenv'
 import OpenAI from 'openai';
 
+// left at 03:38:00
+
 dotenv.config()
 
 const router = express.Router()
@@ -36,8 +38,8 @@ router.route('/').post(async (req, res) =>
         })
 
         // get the image
-        const image = aiResponse.data.data[0].b64_json;
-        // console.log(aiResponse.data)
+        // console.log(aiResponse)
+        const image = aiResponse.data[0].b64_json;
 
         // send the image
         res.status(200).json({ photo: image })
